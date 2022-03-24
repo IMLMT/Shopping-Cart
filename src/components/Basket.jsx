@@ -4,7 +4,7 @@ import React from 'react'
 export default function Basket(props) {
     const{cartItems, onAdd,onRemove} = props
     const itemsPrice = cartItems.reduce((a,c)=> a+c.price*c.qty,0)
-    const taxPrice = itemsPrice*0.0825
+    const taxPrice = cartItems.filter((record)=> record.isTaxable === true).reduce((a,c)=> a+c.price*c.qty,0)
     const totalPrice = itemsPrice+taxPrice
     return (<aside className='block col-1'>
         <h2>Cart Items</h2>
