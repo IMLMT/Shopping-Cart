@@ -2,10 +2,15 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Basket from './components/Basket';
 import data from './data'
+import coupons from './coupons';
 import { useState } from 'react';
+// import coupons1 from './coupons.json';
 
 function App() {
+  // console.log(coupons1)
   const {products} = data;
+  const {coupon} = coupons;
+  // const {coupon1} = coupons1;
   const [cartItems, setCartItems] = useState([])
   const onAdd = (product)=>{
     const exist = cartItems.find(x => x.id === product.id)
@@ -31,7 +36,7 @@ function App() {
       <Header countCartItems={cartItems.length}></Header>
       <div className='row'>
         <Main onAdd = {onAdd} products={products}></Main>
-        <Basket onAdd = {onAdd}  onRemove = {onRemove}cartItems={cartItems}></Basket>
+        <Basket onAdd = {onAdd}  onRemove = {onRemove} cartItems={cartItems} coupon={coupon}></Basket>
       </div>
 
     </div>

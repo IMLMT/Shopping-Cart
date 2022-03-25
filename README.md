@@ -11,3 +11,4 @@ In the project directory, you can run:
 - Implemented adding and removing items from cart.
 - Implemented Total price including Tax of 8.25%.
 - Implemented filtering for isTaxable in JSON.
+- Implemented coupon discounts.
