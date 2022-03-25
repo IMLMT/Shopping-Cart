@@ -2,8 +2,11 @@
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory (client), you can run:
 - npm run build
+- npm start
+
+In the server directory, you can run:
 - npm start
 
 ## About the app:
